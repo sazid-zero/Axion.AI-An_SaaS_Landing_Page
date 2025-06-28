@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import GlassCard from "./GlassCard";
 
 const AboutSection = ({ AnimatedSection, fadeInUp, staggerContainer, scaleIn }: { AnimatedSection: any; fadeInUp: any; staggerContainer: any; scaleIn: any }) => (
   <AnimatedSection id="about" className="py-20 pt-28">
@@ -97,11 +96,14 @@ const AboutSection = ({ AnimatedSection, fadeInUp, staggerContainer, scaleIn }: 
                 alt="About us"
                 className="rounded-2xl shadow-2xl relative z-10 border border-white/20"
                 whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 style={{ y: 0 }}
                 animate={{ y: [-10, 10] }}
-                transition={{ y: { repeat: Infinity, duration: 5, ease: "easeInOut" } }}
-                
+                transition={{
+  type: "spring",
+  stiffness: 300,
+  damping: 20,
+  y: { repeat: Infinity, duration: 5, ease: "easeInOut" }
+}}
               />
             </motion.div>
           </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 import HomeSection from "./components/HomeSection";
 import StatsSection from "./components/StatsSection";
@@ -12,15 +12,15 @@ import PricingSection from "./components/PricingSection";
 import CTASection from "./components/CTASection";
 import FooterSection from "./components/FooterSection";
 
-// Animation variants
-const fadeInUp = {
+// Animation variants with explicit typing
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 60 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
       duration: 0.8,
-      ease: "easeOut"
+      ease: "easeOut" as const
     }
   },
   exit: { 
@@ -28,12 +28,12 @@ const fadeInUp = {
     y: 60,
     transition: {
       duration: 0.4,
-      ease: "easeIn"
+      ease: "easeIn" as const
     }
   }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -51,14 +51,14 @@ const staggerContainer = {
   }
 };
 
-const scaleIn = {
+const scaleIn: Variants = {
   hidden: { scale: 0.8, opacity: 0 },
   visible: { 
     scale: 1, 
     opacity: 1,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
+      ease: "easeOut" as const
     }
   },
   exit: { 
@@ -66,7 +66,7 @@ const scaleIn = {
     opacity: 0,
     transition: {
       duration: 0.4,
-      ease: "easeIn"
+      ease: "easeIn" as const
     }
   }
 };
@@ -264,16 +264,16 @@ function App() {
         </motion.div>
       </motion.nav>
 
-      <HomeSection id="home" AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} />
-      <StatsSection id="stats" AnimatedSection={AnimatedSection} staggerContainer={staggerContainer} scaleIn={scaleIn} />
-      <ServicesSection id="services" AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
-      <FeaturesSection id="features" AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
-      <AboutSection id="about" AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
-      <TestimonialsSection id="testimonials" AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
-      <PricingSection id="pricing" AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
-      <CTASection id="cta" AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} scaleIn={scaleIn} />
-      <BrandsSection id="brands" AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
-      <FooterSection id="footer" fadeInUp={fadeInUp} staggerContainer={staggerContainer} />
+      <HomeSection AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} />
+      <StatsSection AnimatedSection={AnimatedSection} staggerContainer={staggerContainer} scaleIn={scaleIn} />
+      <ServicesSection AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
+      <FeaturesSection AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
+      <AboutSection AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
+      <TestimonialsSection AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
+      <PricingSection AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
+      <CTASection AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} scaleIn={scaleIn} />
+      <BrandsSection AnimatedSection={AnimatedSection} fadeInUp={fadeInUp} staggerContainer={staggerContainer} scaleIn={scaleIn} />
+      <FooterSection fadeInUp={fadeInUp} staggerContainer={staggerContainer} />
     </div>
   );
 }

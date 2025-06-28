@@ -61,10 +61,14 @@ const FeaturesSection = ({ AnimatedSection, fadeInUp, staggerContainer, scaleIn 
                   alt={feature.title}
                   className="w-full h-48 object-cover rounded-2xl border border-white/20 relative z-10"
                   whileHover={{ scale: 1.02, rotate: 1 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   style={{ y: 0 }}
-  animate={{ y: [-10, 10] }}
-  transition={{ y: { repeat: Infinity, duration: 5, ease: "easeInOut" } }}
+                  animate={{ y: [-10, 10] }}
+                  transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                  y: { repeat: Infinity, duration: 5, ease: "easeInOut" }
+}}
                 />
                 {/* Floating Glass Elements */}
                 <motion.div
