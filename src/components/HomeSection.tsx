@@ -1,20 +1,22 @@
 import { motion } from "framer-motion";
 import Button from "./Button";
 
-const HomeSection = ({ AnimatedSection, fadeInUp, staggerContainer }: { AnimatedSection: any; fadeInUp: any; staggerContainer: any }) => (
+const HomeSection = ({ AnimatedSection, fadeInUp, staggerContainer }: {AnimatedSection: any; fadeInUp: any; staggerContainer: any }) => (
   <AnimatedSection id="home" className="pt-32 pb-20 overflow-hidden relative">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false }}
         >
           <motion.h1 
             className="text-4xl lg:text-6xl font-bold leading-tight"
             variants={staggerContainer}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: false }}
           >
             <motion.span variants={fadeInUp} className="text-gray-900">Transform Your Business with{' '}</motion.span>
             <motion.span 
@@ -37,22 +39,25 @@ const HomeSection = ({ AnimatedSection, fadeInUp, staggerContainer }: { Animated
           </motion.h1>
           <motion.p 
             className="text-xl text-gray-600 mt-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
           >
             Leverage cutting-edge artificial intelligence to automate processes, 
             gain insights, and accelerate your business growth. Experience a future where your business runs smarter, faster, and more efficiently.
           </motion.p>
           <motion.div 
             className="mt-8 flex gap-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
           >
             <Button>Get Started</Button>
             <motion.button 
               className="px-6 py-3 backdrop-blur-xl bg-white/20 border border-white/30 rounded-full hover:bg-white/30 transition-all duration-300 font-semibold cursor-pointer"
+              variants={fadeInUp}
               whileHover={{ 
                 scale: 1.05,
                 borderColor: '#3b82f6',
@@ -68,8 +73,9 @@ const HomeSection = ({ AnimatedSection, fadeInUp, staggerContainer }: { Animated
         <motion.div 
           className="relative"
           initial={{ opacity: 0, x: 100, rotate: 5 }}
-          animate={{ opacity: 1, x: 0, rotate: 0 }}
+          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: false }}
           whileHover={{ scale: 1.02, rotate: 1 }}
         >
           <div className="relative group">
@@ -84,10 +90,7 @@ const HomeSection = ({ AnimatedSection, fadeInUp, staggerContainer }: { Animated
                 className="rounded-3xl shadow-2xl relative z-10 border border-white/20"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                
-                
               />
-              
               <motion.div
                 className="absolute -top-4 -right-4 w-16 h-16 backdrop-blur-xl bg-gradient-to-r from-blue-500/30 to-violet-500/30 rounded-2xl border border-white/40 shadow-xl"
                 animate={{
