@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion, useInView, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { useRef } from "react";
 import HomeSection from "./components/HomeSection";
 import StatsSection from "./components/StatsSection";
@@ -78,15 +78,14 @@ function App() {
 
   const AnimatedSection = ({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { margin: "-100px" });
 
     return (
       <motion.div
         ref={ref}
         id={id}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        exit="exit"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
         variants={fadeInUp}
         className={className}
       >
@@ -129,6 +128,7 @@ function App() {
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-r from-blue-400/40 to-purple-400/40 rounded-full blur-3xl"
+          style={{ willChange: "transform" }}
           animate={{
             x: [0, 100, 0],
             y: [0, -100, 0],
@@ -142,6 +142,7 @@ function App() {
         />
         <motion.div
           className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-cyan-400/40 to-green-400/40 rounded-full blur-3xl"
+          style={{ willChange: "transform" }}
           animate={{
             x: [0, -100, 0],
             y: [0, 100, 0],
@@ -155,6 +156,7 @@ function App() {
         />
         <motion.div
           className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-r from-violet-400/30 to-pink-400/30 rounded-full blur-3xl"
+          style={{ willChange: "transform" }}
           animate={{
             x: [0, 50, 0],
             y: [0, -50, 0],

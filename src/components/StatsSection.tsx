@@ -22,6 +22,7 @@ const StatsSection = ({ AnimatedSection, staggerContainer, scaleIn }: { Animated
             variants={scaleIn}
             whileHover={{ scale: 1.1, y: -10 }}
             className="p-4 rounded-xl hover:bg-white/10 transition-all duration-300 group relative"
+            style={{ transform: "translateZ(0)", willChange: "transform" }}
           >
             {/* Glassmorphism Background */}
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 via-violet-600/20 to-cyan-600/20 rounded-xl blur-2xl group-hover:blur-3xl transition-all duration-500" />

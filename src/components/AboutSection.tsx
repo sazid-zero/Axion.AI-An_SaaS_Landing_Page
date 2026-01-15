@@ -84,7 +84,7 @@ const AboutSection = ({ AnimatedSection, fadeInUp, staggerContainer, scaleIn }: 
           transition={{ duration: 0.8 }}
           whileHover={{ scale: 1.05, rotate: 2 }}
           className="relative"
-          
+          style={{ transform: "translateZ(0)", willChange: "transform" }}
         >
           <div className="relative group">
             <div className="absolute -inset-6 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />

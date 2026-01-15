@@ -76,8 +76,7 @@ const HomeSection = ({ AnimatedSection, fadeInUp, staggerContainer }: {AnimatedS
           whileInView={{ opacity: 1, x: 0, rotate: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: false }}
-          whileHover={{ scale: 1.02, rotate: 1 }}
-        >
+          whileHover={{ scale: 1.02, rotate: 1 }} >
           <div className="relative group">
             <div className="absolute -inset-8 bg-gradient-to-r from-blue-600/20 via-violet-600/20 to-cyan-600/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
             <div className="absolute -inset-4 backdrop-blur-xl bg-gradient-to-r from-white/30 to-white/10 rounded-3xl border border-white/40" />

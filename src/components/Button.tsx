@@ -7,11 +7,12 @@ const Button = ({ children, className = "", onClick }: { children: React.ReactNo
     style={{
       background: 'linear-gradient(45deg, rgba(59, 130, 246, 0.9), rgba(139, 92, 246, 0.9), rgba(6, 182, 212, 0.9), rgba(16, 185, 129, 0.9))',
       backgroundSize: '400% 400%',
+      transform: "translateZ(0)",
+      willChange: "transform"
     }}
     whileHover={{ 
       scale: 1.05,
       backgroundPosition: '100% 0%',
-      boxShadow: '0 25px 50px rgba(59, 130, 246, 0.4)',
     }}
     whileTap={{ scale: 0.95 }}
     animate={{

@@ -36,6 +36,7 @@ const CTASection = ({ AnimatedSection, fadeInUp, scaleIn }: { AnimatedSection: a
         <motion.div
           variants={scaleIn}
           whileHover={{ scale: 1.1 }}
+          style={{ transform: "translateZ(0)", willChange: "transform" }}
         >
           <Button>Get In Touch</Button>
         </motion.div>

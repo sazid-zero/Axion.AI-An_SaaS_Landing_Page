@@ -51,9 +51,9 @@ const TestimonialsSection = ({ AnimatedSection, fadeInUp, staggerContainer, scal
             whileHover={{ 
               scale: 1.05, 
               y: -10,
-              boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
             }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            style={{ transform: "translateZ(0)", willChange: "transform" }}
           >
             <GlassCard className="p-8 group h-full relative">
               {/* Animated Avatar with Glass Effect */}
