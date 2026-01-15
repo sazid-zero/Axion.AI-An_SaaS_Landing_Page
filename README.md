@@ -44,6 +44,7 @@ The goal of this project was to build a conversion-focused landing page that cle
 ![Pricing Section](./screenshots/pricing.png)
 
 # 📂 Project Structure
+```
 src/
 ├── components/     # Reusable UI components
 ├── pages/          # Page-level components
@@ -51,6 +52,7 @@ src/
 ├── styles/         # Global styles (if any)
 ├── App.tsx
 └── main.tsx
+```
 
 # ⚙️ Installation & Setup
 
