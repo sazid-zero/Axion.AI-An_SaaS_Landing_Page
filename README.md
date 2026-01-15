@@ -37,10 +37,13 @@ The goal of this project was to build a conversion-focused landing page that cle
 
 # 📸 Screenshots
 
-(Add screenshots of the hero section, features section, and mobile view here)
-
+Hero Section:
 ![Hero Section](./screenshots/hero.png)
+
+Features:
 ![Features Section](./screenshots/features.png)
+
+Pricing:
 ![Pricing Section](./screenshots/pricing.png)
 
 # 📂 Project Structure
