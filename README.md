@@ -6,6 +6,17 @@ This project showcases clean UI/UX design, reusable component architecture, and 
 🌐 Live Demo:
 👉 https://axion-ai-an-saa-s-landing-page-kd2m.vercel.app/
 
+# 📸 Screenshots
+
+Hero Section:
+![Hero Section](./screenshots/hero.png)
+
+Features:
+![Features Section](./screenshots/features.png)
+
+Pricing:
+![Pricing Section](./screenshots/pricing.png)
+
 # Overview
 
 Axion AI is a frontend-only project designed to represent an AI-focused Software-as-a-Service (SaaS) platform.
@@ -34,14 +45,6 @@ The goal of this project was to build a conversion-focused landing page that cle
 • Build Tool: Vite
 
 • Deployment: Vercel
-
-# 📸 Screenshots
-
-(Add screenshots of the hero section, features section, and mobile view here)
-
-![Hero Section](./screenshots/hero.png)
-![Features Section](./screenshots/features.png)
-![Pricing Section](./screenshots/pricing.png)
 
 # 📂 Project Structure
 ```
