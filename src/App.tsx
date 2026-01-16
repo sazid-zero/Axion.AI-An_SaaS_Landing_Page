@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Lenis from "lenis";
 import { motion, type Variants } from "framer-motion";
 import { useRef } from "react";
 import HomeSection from "./components/HomeSection";
@@ -72,6 +73,21 @@ const scaleIn: Variants = {
 };
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   useEffect(() => {
     document.title = "Axion.AI - AI SaaS Platform";
   }, []);
