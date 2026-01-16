@@ -24,23 +24,27 @@ The goal of this project was to build a conversion-focused landing page that cle
 
 # ✨ Features
 
-⚛️ Built with React and TypeScript for scalable, type-safe development
+- Smooth Scrolling: Integrated with Lenis for a buttery-smooth, modern scrolling experience
 
-🎨 Styled using Tailwind CSS with a modern and clean design system
+- Built with React and TypeScript for scalable, type-safe development
 
-📱 Fully responsive & mobile-first layout
+- Styled using Tailwind CSS with a modern and clean design system
 
-🧩 Modular and reusable React components
+- High-performance scroll-triggered animations using framer-motion
 
-🚀 Fast performance and optimized build
+- Fully responsive & mobile-first layout
 
-🎯 Clear call-to-action sections for SaaS-style user engagement
+- Modular and reusable React components
+
+- Fast performance and optimized build
+
+- Clear call-to-action sections for SaaS-style user engagement
 
 # 🛠️ Tech Stack
 
 • Frontend: React, TypeScript
 
-• Styling: Tailwind CSS
+• Styling: Tailwind CSS, framer-motion
 
 • Build Tool: Vite
 
