@@ -56,7 +56,7 @@ src/
 ├── components/     # Reusable UI components
 ├── pages/          # Page-level components
 ├── assets/         # Images & static assets
-├── styles/         # Global styles (if any)
+├── styles/         # Global styles
 ├── App.tsx
 └── main.tsx
 ```
